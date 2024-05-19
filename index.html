@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="imagenes/isil+.png" alt="logo" height="50"></img>
+        </header>
+        <h1>Pseudocódigo con estructuras condicionales anidadas</h1>
+            <div id="Caso">
+                <img src="imagenes/caso4.png" alt="caso4">
+            </div>
+            <div id="solucion">
+                <script>
+                    //Declaracion de varialbles
+                    var not1,not2,not3,not4,noteliminada,prom;
+
+                    //Fase de lectura 
+                    not1=parseInt(prompt("Ingrese la primera nota"));
+                    not2=parseInt(prompt("Ingrese la segunda nota"));
+                    not3=parseInt(prompt("Ingrese la tercera nota"));
+                    not4=parseInt(prompt("Ingrese la cuarta nota"));
+
+                    //Fase de procesamiento de datos
+                    if (not1<=not2 && not1<=not3 && not1<=not4) {
+                        noteliminada=not1;
+                    } else {
+                        if (not2<=not1 && not2<=not3 && not2<=not4) {
+                            noteliminada=not2;
+                        } else {
+                            if (not3<=not1 && not3<=not2 && not3<=not4) {
+                                noteliminada=not3;
+                            } else {
+                                noteliminada=not4;
+                            }
+                        }
+                    }
+
+                    //Prmedio de las practicas
+                    prom=(not1+not2+not3+not4-noteliminada)/3
+
+                    //Fase de salida
+                    document.write("El promedio de la tres mejores notas es: "+prom+"<br>");
+                    document.write("La nota eliminada es: "+noteliminada);
+
+                </script>
+            </div>
+     </main>
+    
+</body>
+</html>
